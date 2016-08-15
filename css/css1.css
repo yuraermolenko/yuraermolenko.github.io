@@ -1,0 +1,457 @@
+﻿body
+{
+    margin:0;
+}
+/*Global styles*/
+h1
+ {  
+    text-align: center;
+    font-weight: bold;
+    font-family: Georgia, serif;
+    font-size: 2em;
+    font-stretch:condensed;
+    font-variant: small-caps;
+ }
+ hr
+ {
+    text-align:center;
+    width: 200px;
+    border: none;
+    color: orange;
+    background-color: orange;
+    height:2px;
+}
+h4 
+{
+    text-align: center;
+    font-weight: bold;
+    font-family: Georgia, serif;
+    font-stretch:condensed;
+    font-variant: small-caps;
+     /*position:absolute;
+     top:45%;*/
+}
+p 
+{
+    text-align:center;
+    /* position:absolute;
+     top:50%;*/
+}
+/*Header*/
+#header{
+       position:fixed;
+            background-color: gray;
+            height:100px;
+            left:0px;
+            top:0px;
+            margin:0;
+            width:100%;
+             z-index:2;
+}
+#label{
+}
+#menuPanel {   
+        height:100px;
+           text-align:end ;
+}
+.menuButtons{
+             position:absolute;
+            left:50%;
+            top:40%;
+            font-size:20px;
+            color:yellow;
+        }
+       /* First Slider*/
+#firstSlider {
+    position:absolute;
+    width:100%;
+    top:100px;
+    height:300px;
+    margin:0;
+}
+.firstSlides{
+   width:100%;
+}
+  .divInSlides{
+            height:100px;
+            position:absolute;
+            top:100px;
+    opacity:0.4;
+    background-color:black;
+    width:100%;
+        }
+    .textInSlides{
+ text-align:center;
+    color:white;
+        }
+            #leftBtn{
+            position:absolute;
+            left:40%;
+            top:250px;
+            z-index:1;
+             opacity:0.4;
+    background-color:black;
+    color:white;
+        }
+              #rightBtn{
+            position:absolute;
+            left:60%;
+            top:250px;
+            z-index:1;
+             opacity:0.4;
+    background-color:black;
+    color:white;
+        }
+/*Block Services*/
+#services{
+    position:absolute;
+    width:100%;
+    height:250px;
+    top:400px;
+    margin:0;
+}
+.textInBoxes{
+    text-align:center;
+   width:50%;
+   margin:auto;
+}
+#serviceImageContainer{
+    top:650px;
+    position:absolute;
+    height:100px;
+    width:100%;
+}
+#serviceImageBox1{
+    left:22%;
+    position:absolute;
+    width:100px;
+    height:100px;
+}
+#serviceImageBox2{
+    left:37.5%;
+    position:absolute;
+    width:100px;
+    height:100px;
+}
+#serviceImageBox3{
+    left:53%;
+    position:absolute;
+    width:100px;
+    height:100px;
+}
+#serviceImageBox4{
+    left:68.5%;
+    position:absolute;
+    width:100px;
+    height:100px;
+}
+.img{ 
+    border-radius: 50%;
+    width:100px;
+    height:100px;
+}
+#serviceTextContainer{
+    position:absolute;
+    top:750px;
+    height:150px;
+    width:100%;
+}
+#serviceImageText1{
+    left:20%;
+     position:absolute;
+    width:150px;
+    height:100px;
+}
+#serviceImageText2{
+    left:35.5%;
+     position:absolute;
+    width:150px;
+    height:100px;
+}
+#serviceImageText3{
+    left:51%;
+     position:absolute;
+    width:150px;
+    height:100px;
+}
+#serviceImageText4{
+    left:66.5%;
+     position:absolute;
+    width:150px;
+    height:100px;
+}
+#serviceSecondTextBox{
+    background-color:black;
+    position:absolute;
+    top:900px;
+    height:150px;
+    margin:0;
+    width:100%;
+}
+#serviceSecondImageContainer{
+    background-color:black;
+    position:absolute;
+    top:1050px;
+    height:60px;
+    width:100%;
+}
+.imgSecond{
+      border-radius: 50%;
+    width:50px;
+    height:50px;
+}
+#serviceSecondImageBox1{
+    left:22.3%;
+   position:absolute;
+    width:50px;
+    height:50px;
+    background-color:black;
+}
+#serviceSecondImageBox2{
+    left:32.5%;
+   position:absolute;
+    width:50px;
+    height:50px;
+    background-color:black;
+}
+#serviceSecondImageBox3{
+    left:42.7%;
+   position:absolute;
+    width:50px;
+    height:50px;
+    background-color:black;
+}
+#serviceSecondImageBox4{
+    left:52.9%;
+   position:absolute;
+    width:50px;
+    height:50px;
+    background-color:black;
+}
+#serviceSecondImageBox5{
+    left:63.1%;
+   position:absolute;
+    width:50px;
+    height:50px;
+    background-color:black;
+}
+#serviceSecondImageBox6{
+    left:73.3%;
+   position:absolute;
+    width:50px;
+    height:50px;
+    background-color:black;
+}
+#serviceSecondTextContainer{
+    width:100%;
+    position:absolute;
+    top:1110px;
+    height:100px;
+    background-color:black;
+}
+#serviceSecondImageText1{
+    left:20%;
+ position:absolute;
+    width:100px;
+    height:100px;
+}
+#serviceSecondImageText2{
+    left:30.2%;
+ position:absolute;
+    width:100px;
+    height:100px;
+}
+#serviceSecondImageText3{
+    left:40.4%;
+ position:absolute;
+    width:100px;
+    height:100px;
+}
+#serviceSecondImageText4{
+    left:50.6%;
+ position:absolute;
+    width:100px;
+    height:100px;
+}
+#serviceSecondImageText5{
+    left:60.8%;
+ position:absolute;
+    width:100px;
+    height:100px;
+}
+#serviceSecondImageText6{
+    left:71%;
+ position:absolute;
+    width:100px;
+    height:100px;
+}
+
+/*block Work*/
+#work{
+    position:absolute;
+    top:1210px;
+    height:250px;
+    width:100%;
+}
+#workButtonsBlock{
+     position:absolute;
+    top:1500px;
+    height:50px;
+    width:100%;
+    text-align:center;
+}
+#photos{
+    position:absolute;
+    top:1550px;
+    width:100%;
+    height:300px;
+    text-align:center;
+
+}
+.photos{
+    display:inline-block;
+    width:150px;
+    height:150px;
+    float:left;
+}
+#likeLink{
+    position:absolute;
+    top:1850px;
+    width:100%;
+    text-align:center;
+    height:150px;
+}
+#btnContactUs
+ {
+ 	color: white;
+ 	background: yellow;
+ 	width: 80px;
+ 	height: 40px;
+ 	margin-top: 30px;
+ }
+#proudsText{
+    position:absolute;
+    top:2100px;
+    width:100%;
+    height:150px;
+    background-color:black;
+}
+#proudsContent{
+     position:absolute;
+    top:2250px;
+    width:100%;
+    height:150px;
+    background-color:black;
+    text-align:center;
+}
+ #happyClients {
+             left:20%;
+     position:absolute;
+            background-color: black;
+            border: 2px solid yellow;
+            text-align: center;
+            height:55px;
+            width:150px;
+            padding:20px;
+        }
+  #completedProjects {
+            left:35.5%;
+     position:absolute;
+            background-color: black;
+            border: 2px solid yellow;
+            text-align: center;
+            height:55px;
+            width:150px;
+            padding:20px;
+        }
+   #awards {
+              left:51%;
+     position:absolute;
+            background-color: black;
+            border: 2px solid yellow;
+            text-align: center;
+            height:55px;
+            width:150px;
+            padding:20px;
+        }
+    #coffeeDrinks {
+         left:66.5%;
+     position:absolute;
+            background-color: black;
+            border: 2px solid yellow;
+            text-align: center;
+            height:55px;
+            width:150px;
+            padding:20px;
+        }
+    .emptyDiv{
+        background-color:black;
+        width:20px;
+        height:20px;
+        display:inline-block;
+    }
+    /*About Us*/
+    #about{
+        position:absolute;
+        top:2400px;
+        width:100%;
+        text-align:center;
+    }
+    #aboutContent
+ {
+    width: 900px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ }
+    .aboutTextBox
+ {
+ 	height:100px;
+ 	width: 260px;
+ 	float: left;
+ 	margin-right: 40px;
+ }
+    .aboutImageBox
+ {
+ 	width: 80px;
+ 	height: 100px;
+ 	float: left;
+ 	margin-right: 60px;
+ }
+    .img2
+{
+	height: 60px;
+	border-radius: 50%;
+	margin-left: 25px;
+	margin-top: 40px;
+}
+    .pblockAbout
+ {
+ 	text-align: justify;
+ }
+    /*Team Box*/
+    #teamTextBox{
+        background-color:beige;
+        position:absolute;
+        top:2900px;
+        height:150px;
+        width:100%;
+    }
+    #teamPhotosBox{
+         background-color:beige;
+        position:absolute;
+        top:3050px;
+        width:100%;
+        height:250px;
+
+    }
+    .teamImage{
+        width:150px;
+        height:150px;
+    }
+    #teamPhotosTextBox{
+        position:absolute;
+         background-color:beige;
+         top:3300px;
+         width:100%;
+         height:100px;
+    }
