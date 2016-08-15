@@ -40,9 +40,9 @@ window.addEventListener('load', function () {
     slide1.appendChild(slide1Div);
     slide2.appendChild(slide2Div);
     slide3.appendChild(slide3Div);
-    slide1.style.backgroundImage = "url('images/try.jpg')"; slide1.style.width = "100%"; slide1.style.height = "300px"
-    slide2.style.backgroundImage = "url('images/Chrysanthemum.jpg')"; slide2.style.width = "100%"; slide2.style.height = "300px"
-    slide3.style.backgroundImage = "url('images/Lighthouse.jpg')"; slide3.style.width = "100%"; slide3.style.height = "300px"
+    slide1.style.backgroundImage = "url('images/1.jpg')"; slide1.style.width = "100%"; slide1.style.height = "300px"
+    slide2.style.backgroundImage = "url('images/2.jpg')"; slide2.style.width = "100%"; slide2.style.height = "300px"
+    slide3.style.backgroundImage = "url('images/3.jpg')"; slide3.style.width = "100%"; slide3.style.height = "300px"
     var slider = {
         slides: [slide1, slide2, slide3],
         counter: 0,
