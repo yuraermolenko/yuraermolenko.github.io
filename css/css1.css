@@ -1,4 +1,4 @@
-﻿body
+body
 {
     margin:0;
 }
@@ -441,7 +441,7 @@ p
         position:absolute;
         top:3050px;
         width:100%;
-        height:250px;
+        height:150px;
 
     }
     .teamImage{
@@ -451,7 +451,7 @@ p
     #teamPhotosTextBox{
         position:absolute;
          background-color:beige;
-         top:3300px;
+         top:3200px;
          width:100%;
          height:100px;
     }
