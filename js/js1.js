@@ -28,7 +28,7 @@ window.addEventListener('load', function () {
     var slide1 = document.createElement("div");
     var slide1Div = document.createElement("div");
     slide1Div.className = "divInSlides";
-    slide1Div.innerHTML = "<p class='textInSlides'><span style="color:white;font-size:14px">First Slide</span><br></br>Some text</p>";
+    slide1Div.innerHTML = "<p class='textInSlides'>Some text</p>";
     var slide2 = document.createElement("div");
     var slide2Div = document.createElement("div");
     slide2Div.className = "divInSlides";
