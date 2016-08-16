@@ -322,6 +322,16 @@ p
            height:150px;
            width:900px;
         }
+.hoverPhotoDivs
+         {
+       position:absolute;
+       opacity:0.5;
+       background-color:yellow;
+       z-index:1;
+       text-align:center;
+       height: 5em;
+    line-height: 9em;
+   }
 #likeLink{
     position:absolute;
     top:1850px;
