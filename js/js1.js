@@ -190,12 +190,12 @@ document.addEventListener("load", function () {
 }, true);
 document.addEventListener("click", function (e) {
     var target = e.target;
-    var a = document.getElementsByTagName("a");
+    if (!target.hasAttribute("data-clickPhotos")) return;
+     var a = document.getElementsByTagName("a");
     for (var count = 0; count < a.length; count++) {
         if (a[count].hasAttribute("data-clickPhotos")) a[count].style.color = "black";
     }
     target.style.color = "yellow";
-    if (!target.hasAttribute("data-clickPhotos")) return;
     var filteredPhotos = [];
     for (var i = 0; i < clone.length; i++) {
         if (clone[i].getAttribute("data-value") == target.getAttribute("data-clickPhotos") || target.getAttribute("data-clickPhotos") == "ALL") filteredPhotos.push(clone[i]);
