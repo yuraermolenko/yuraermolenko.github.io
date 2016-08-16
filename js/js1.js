@@ -1,4 +1,4 @@
-
+//Header-SlowScroll
 document.addEventListener('click', function (e) {
     var target = e.target;
     if (!target.hasAttribute('data-click')) return;
@@ -21,6 +21,7 @@ document.addEventListener('click', function (e) {
         }
     }, 30);
 }, true);
+//Slider1
 window.addEventListener('load', function () {
     var btnLeft = document.getElementById("leftBtn");
     var btnRight = document.getElementById("rightBtn");
@@ -40,9 +41,9 @@ window.addEventListener('load', function () {
     slide1.appendChild(slide1Div);
     slide2.appendChild(slide2Div);
     slide3.appendChild(slide3Div);
-    slide1.style.backgroundImage = "url('images/1.jpg')"; slide1.style.width = "100%"; slide1.style.height = "300px"
-    slide2.style.backgroundImage = "url('images/2.jpg')"; slide2.style.width = "100%"; slide2.style.height = "300px"
-    slide3.style.backgroundImage = "url('images/3.jpg')"; slide3.style.width = "100%"; slide3.style.height = "300px"
+    slide1.style.backgroundImage = "url('images/try.jpg')"; slide1.style.width = "100%"; slide1.style.height = "300px"
+    slide2.style.backgroundImage = "url('images/Chrysanthemum.jpg')"; slide2.style.width = "100%"; slide2.style.height = "300px"
+    slide3.style.backgroundImage = "url('images/Lighthouse.jpg')"; slide3.style.width = "100%"; slide3.style.height = "300px"
     var slider = {
         slides: [slide1, slide2, slide3],
         counter: 0,
@@ -86,6 +87,7 @@ window.addEventListener('load', function () {
         }, 2000)
     });
 }, true);
+//Slow increase/decrease icons
 document.addEventListener('mouseover', function (e) {
     target = e.target;
     if (!target.hasAttribute('data-raised')) return;
@@ -118,6 +120,7 @@ document.addEventListener('mouseout', function (e) {
     }, 10);
     e.stopPropagation();
 });
+//dynamic numbers
 document.addEventListener("scroll", function () {
     var happyClientscounter = document.getElementById("happyClientscounter");
     var happyClientscounterCoords = happyClientscounter.getBoundingClientRect();
@@ -176,4 +179,36 @@ document.addEventListener("scroll", function () {
         }, 3000);
     }
 
+}, true);
+//PhotoAlbum
+document.addEventListener("load", function () {
+    photos = document.getElementsByClassName("photos");
+    clone = {};
+    for (var key in photos) {
+        clone[key] = photos[key];
+    }
+}, true);
+document.addEventListener("click", function (e) {
+    var target = e.target;
+    var a = document.getElementsByTagName("a");
+    for (var count = 0; count < a.length; count++) {
+        if (a[count].hasAttribute("data-clickPhotos")) a[count].style.color = "black";
+    }
+    target.style.color = "yellow";
+    if (!target.hasAttribute("data-clickPhotos")) return;
+    var filteredPhotos = [];
+    for (var i = 0; i < clone.length; i++) {
+        if (clone[i].getAttribute("data-value") == target.getAttribute("data-clickPhotos") || target.getAttribute("data-clickPhotos") == "ALL") filteredPhotos.push(clone[i]);
+    }
+    var divs = document.getElementsByClassName("album");
+    for (var j = 0; j < divs.length; j++) {
+        while (divs[j].firstChild) {
+            divs[j].removeChild(divs[j].firstChild);
+        }
+    }
+    var numberOfDiv = 0;
+    for (var counter = 0; counter < filteredPhotos.length; counter++) {
+        if (divs[numberOfDiv].childNodes.length >= 6) numberOfDiv++;
+        divs[numberOfDiv].appendChild(filteredPhotos[counter]);
+    }
 }, true);
