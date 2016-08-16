@@ -191,7 +191,7 @@ document.addEventListener("load", function () {
 document.addEventListener("click", function (e) {
     var target = e.target;
     if (!target.hasAttribute("data-clickPhotos")) return;
-     var a = document.getElementsByTagName("a");
+    var a = document.getElementsByTagName("a");
     for (var count = 0; count < a.length; count++) {
         if (a[count].hasAttribute("data-clickPhotos")) a[count].style.color = "black";
     }
@@ -211,4 +211,28 @@ document.addEventListener("click", function (e) {
         if (divs[numberOfDiv].childNodes.length >= 6) numberOfDiv++;
         divs[numberOfDiv].appendChild(filteredPhotos[counter]);
     }
+}, true);
+//Hover Photos
+ document.addEventListener("mouseover", function (e) {
+    var target = e.target;
+    var currentDiv = document.getElementsByClassName("hoverPhotoDivs")[0];
+    if (!target.hasAttribute("data-value")) return;
+    if (currentDiv) document.body.removeChild(div);
+    var value = target.getAttribute("data-value");
+    var coords = target.getBoundingClientRect();
+    div = document.createElement('div');
+    div.className = "hoverPhotoDivs";
+    div.style.top = coords.top + pageYOffset + "px";
+    div.style.left = coords.left + pageXOffset + "px";
+    div.style.width = target.clientWidth + "px";
+    div.style.height = target.clientHeight + "px";
+    div.innerHTML = value;
+    document.body.appendChild(div);
+}, true);
+document.addEventListener("mouseout", function (e) {
+    var target = e.target;
+    var currentDiv = document.getElementsByClassName("hoverPhotoDivs")[0];
+    if (target == currentDiv) document.body.removeChild(div);
+    // if (!target.hasAttribute("data-value")) return;
+
 }, true);
