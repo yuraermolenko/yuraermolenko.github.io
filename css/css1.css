@@ -299,21 +299,29 @@ p
     height:50px;
     width:100%;
     text-align:center;
-}
-#photos{
-    position:absolute;
-    top:1550px;
-    width:100%;
-    height:300px;
-    text-align:center;
-
-}
-.photos{
-    display:inline-block;
+} .photos{   
     width:150px;
     height:150px;
     float:left;
 }
+        #workAlbum1{
+            position:absolute;
+            top:1550px;
+            width:100%;
+            height:150px;
+        }
+        
+        #workAlbum2{
+            position:absolute;
+            top:1700px;
+            width:100%;
+            height:150px;
+        }
+        .album{
+           margin:auto;
+           height:150px;
+           width:900px;
+        }
 #likeLink{
     position:absolute;
     top:1850px;
@@ -454,4 +462,4 @@ p
          top:3200px;
          width:100%;
          height:100px;
-    }
+}
