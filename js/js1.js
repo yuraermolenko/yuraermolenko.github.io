@@ -1,3 +1,5 @@
+
+
 //Header-SlowScroll
 document.addEventListener('click', function (e) {
     var target = e.target;
@@ -41,9 +43,9 @@ window.addEventListener('load', function () {
     slide1.appendChild(slide1Div);
     slide2.appendChild(slide2Div);
     slide3.appendChild(slide3Div);
-    slide1.style.backgroundImage = "url('images/try.jpg')"; slide1.style.width = "100%"; slide1.style.height = "300px"
-    slide2.style.backgroundImage = "url('images/Chrysanthemum.jpg')"; slide2.style.width = "100%"; slide2.style.height = "300px"
-    slide3.style.backgroundImage = "url('images/Lighthouse.jpg')"; slide3.style.width = "100%"; slide3.style.height = "300px"
+    slide1.style.backgroundImage = "url('images/1.jpg')"; slide1.style.width = "100%"; slide1.style.height = "300px"
+    slide2.style.backgroundImage = "url('images/2.jpg')"; slide2.style.width = "100%"; slide2.style.height = "300px"
+    slide3.style.backgroundImage = "url('images/3.jpg')"; slide3.style.width = "100%"; slide3.style.height = "300px"
     var slider = {
         slides: [slide1, slide2, slide3],
         counter: 0,
@@ -103,7 +105,7 @@ document.addEventListener('mouseover', function (e) {
         if (parseInt(target.style.width) >= maxWidth) clearInterval(raiseInterval);
     }, 10);
     e.stopPropagation();
-});
+},true);
 document.addEventListener('mouseout', function (e) {
     mytarget = e.target;
     if (!mytarget.hasAttribute('data-raised')) return;
@@ -119,7 +121,7 @@ document.addEventListener('mouseout', function (e) {
         if (parseInt(mytarget.style.width) <= minWidth) clearInterval(decreaseInterval);
     }, 10);
     e.stopPropagation();
-});
+},true);
 //dynamic numbers
 document.addEventListener("scroll", function () {
     var happyClientscounter = document.getElementById("happyClientscounter");
@@ -180,14 +182,23 @@ document.addEventListener("scroll", function () {
     }
 
 }, true);
-//PhotoAlbum
-document.addEventListener("load", function () {
+//PhotoAlbum+Slider2
+window.addEventListener("load", function () {
     photos = document.getElementsByClassName("photos");
     clone = {};
     for (var key in photos) {
         clone[key] = photos[key];
-    }
-}, true);
+    };
+    secondSlider = document.getElementById("container1");
+    setInterval(function () {
+        secondSlider.style.left =-750 + "px";
+    }, 10000);
+    setTimeout(function () {
+        setInterval(function () {
+            secondSlider.style.left = 0 + "px";
+        }, 10000)
+    }, 15000);
+},true);
 document.addEventListener("click", function (e) {
     var target = e.target;
     if (!target.hasAttribute("data-clickPhotos")) return;
@@ -233,6 +244,71 @@ document.addEventListener("mouseout", function (e) {
     var target = e.target;
     var currentDiv = document.getElementsByClassName("hoverPhotoDivs")[0];
     if (target == currentDiv) document.body.removeChild(div);
-    // if (!target.hasAttribute("data-value")) return;
-
 }, true);
+
+//ThirdSlider
+document.addEventListener('click', function (e) {
+    var target = e.target;
+    if (!target.hasAttribute("data-position")) return;
+    var container = document.getElementById("container2");
+    container.style.left = target.getAttribute("data-position");
+}, true);
+// Send Form
+
+window.onload = function () {
+
+
+    document.forms[0].addEventListener("submit", function (e) {
+        if (document.getElementsByClassName("errorMessage")) {
+            while (document.getElementsByClassName("errorMessage")[0])
+                document.body.removeChild(document.getElementsByClassName("errorMessage")[0]);
+        }
+
+        var name = document.getElementsByClassName("formsSpace")[0];
+        var email = document.getElementsByClassName("formsSpace")[1];
+        var sub = document.getElementsByClassName("formsSpace")[2];
+        if (name.value.length == 0 || name.value.match(/\W/) !== null) {
+
+            e.preventDefault();
+            var nameError = document.createElement("div");
+            nameError.innerHTML = "Please use only english letters";
+            var coordName = name.getBoundingClientRect();
+            nameError.style.top = coordName.bottom + pageYOffset + 5 + "px";
+            nameError.style.left = coordName.left + pageXOffset + "px";
+            nameError.style.width = name.clientWidth + "px";
+            nameError.style.height = name.clientHeight + "px";
+            nameError.className = "errorMessage";
+            document.body.appendChild(nameError);
+
+        }
+        if (email.value.length == 0 || email.value.match(/[^\d\w_@]/) !== null) {
+
+            e.preventDefault();
+            var emailError = document.createElement("p");
+            emailError.innerHTML = "Please use only english letters,<br> numbers and '@' '_'";
+            var coordEmail = email.getBoundingClientRect();
+            emailError.style.top = coordEmail.bottom + pageYOffset + 5 + "px";
+            emailError.style.left = coordEmail.left + pageXOffset + "px";
+            emailError.style.width = email.clientWidth + "px";
+            emailError.style.height = email.clientHeight + "px";
+            emailError.className = "errorMessage";
+            document.body.appendChild(emailError);
+        }
+        if (sub.value.length == 0 || sub.value.match(/[^\d\w]/) !== null) {
+
+            e.preventDefault();
+            var subError = document.createElement("p");
+            subError.innerHTML = "Please use only english letters and numbers";
+            var coordSub = sub.getBoundingClientRect();
+            subError.style.top = coordSub.bottom + pageYOffset + 5 + "px";
+            subError.style.left = coordSub.left + pageXOffset + "px";
+            subError.style.width = sub.clientWidth + "px";
+            subError.style.height = sub.clientHeight + "px";
+            subError.className = "errorMessage";
+            document.body.appendChild(subError);
+
+        }
+        e.preventDefault();
+
+    }, true);
+}
