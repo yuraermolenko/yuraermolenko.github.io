@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="myProject">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Libraries/angular.js"></script>
+    <link href="Libraries/bootstrap.css" rel="stylesheet" />
+    <link href="css/css.css" rel="stylesheet" />
+    <script src="Libraries/angular-cookies.js"></script>
+    <script src="Libraries/angular_route.js"></script>
+    <script src="js/main.js"></script>
+    <script src="angular-scroll-master/angular-scroll.js"></script>
+    <script >
+</script>
+        <script type="text/ng-template" id="customTemplate">
+            <div id="counters" class="container">
+                <div class="row">
+                    <div class="blackSpace col-xs-8 col-xs-offset-2 col-md-8 col-md-offset-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-xs-offset-3 col-md-6 col-md-offset-3">
+                        <div  class="col-xs-3 col-md-3" ng-repeat="item in counterItems" id="{{item.name}}">
+                            <img src="{{item.scr}}" class="images1" />
+                            <h2 class="text-center">{{item.factValue}}</h2>
+                            <p class="text-center">{{item.name}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-8 col-xs-offset-2 col-md-8 col-md-offset-2 blackSpace"></div>
+                </div>
+            </div>
+        </script>
+
+</head>
+<body ng-controller="mainCtrl">
+   
+        <div id="menu" class="container-fluid">
+            <div class="row">
+                <div class="col-xs-4 col-md-4"> <img id="ket" src="images/ket.jpg"> </div>
+                <div class="col-xs-1 col-md-1"><button class="menubutton" ng-click="show('weMakeWeb')">HOME</button></div>
+                <div class="col-xs-1 col-md-1"><button class="menubutton" ng-click="show('services')">SERVICES</button></div>
+                <div class="col-xs-1 col-md-1"><button class="menubutton" ng-click="show('portfolio')">PORTFOLIO</button></div>
+                <div class="col-xs-1 col-md-1"><button class="menubutton" ng-click="show('about')"> ABOUT </button></div>
+                <div class="col-xs-1 col-md-1"><button class="menubutton" ng-click="show('news')"> NEWS </button></div>
+                <div class="col-xs-1 col-md-1"><button class="menubutton" ng-click="show('contact')"> CONTACTS</button></div>
+            </div>
+        </div>
+
+    <div id="weMakeWeb">
+        <div id="textweb">
+            <p id="Websitep"> WE MAKE WEBSITES </p>           
+            <p id="Websitep"> <button id="buttonWeb" ng-click="show('portfolio')"> <p id="startTour"> START TOUR </p> </button> </p> 
+        </div>
+    </div>
+
+    <div id="services" class="container">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2 col-md-8 col-md-offset-2" >
+                <div class="col-xs-3 col-md-3   " ng-repeat="item in serviceArr" ng-click="switchService(item.name)">
+                    <button class="button servicesBlock">
+                        <img class="images" src="{{item.src}}" />
+                        <h2 class="h2Text">{{item.name}}</h2>
+                        <hr class="text-center hr" />
+                    </button>
+                </div>
+
+            </div>
+            </div>
+        <div class="row" ng-switch on="nameOfService">
+            <div class="col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 " ng-switch-when="Web Design">              
+                    <h2>Web Design</h2>
+                <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                    </div>
+            <div class="col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1" ng-switch-when="Graphic Design">
+                <h2>Graphic Design</h2>
+                <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+            <div class="col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1" ng-switch-when="Programming">
+                <h2>Programming</h2>
+                <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+             </div>
+            <div class="col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1" ng-switch-when="Photography">
+                <h2>Photography</h2>
+                <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="Responsive">
+        <div id="white"> </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="resp1" class="col-xs-3 col-xs-offset-3 col-md-3 col-md-offset-3">START TOUR</div>
+                <div id="resp" class="col-xs-3 col-md-3">FOR ALL DEVICES</div>
+            </div>
+            <div class="row">
+                <div id="workInner1" class="col-xs-3 col-xs-offset-3 col-md-3 col-md-offset-3"><img id="mobileImg" src="images/mobile.jpg"> </div>
+                <div id="workInner" class="col-xs-3 col-md-3">
+
+                    <div id="textResp">
+                        <h1 id="hTextResp"> Fully Responsive</h1>
+                        <p id="pTextResp"> your mission complete your mission complete your mission complete your mission complete your mission complete your mission complete your mission complete your mission complete your mission complete your mission complete your mission complete your mission complete your mission complete your mission complete your mission complete </p>
+                        <button id="getNow" ng-click="show('contact')">GET NOW </button>
+                    </div>
+
+                </div>
+                <div class="col-xs-3 col-md-3"> </div>
+            </div> 
+        </div>
+    </div> 
+    
+    <div id="portfolio" class="container">
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3 col-md-6 col-md-offset-3">
+                <h1 class="text-center">Our Portfolio</h1>
+                <hr class="text-center" />
+                <p class="text-center">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                <div class="form-inline" style="text-align:center">
+                    <button class="button" ng-click="toggleCategory('ALL')">All</button>
+                    <button class="button" ng-click="toggleCategory('WEB DESIGN')">Web</button>
+                    <button class="button" ng-click="toggleCategory('PHOTOGRAPHY')">Photography</button>
+                    <button class="button" ng-click="toggleCategory('GRAPHIC DESIGN')">Graphic Design</button>
+                </div>
+            </div>
+        </div>
+
+        <div style="width: 100%;text-align:justify; height:300px; padding-top: 50px; margin: auto; ">
+            <img ng-repeat="item in pictures | filter:sortPhotos" src="{{item.src}}" data-value="{{item.group}}" class="photos" />
+        </div>
+    </div>
+
+<create-proud-icons></create-proud-icons>
+    <creat-about-us-block></creat-about-us-block>
+
+    <div id="news">
+        <div id="newsInner">
+            <h1 id="hNews"> CHECK OUR NEWS</h1>
+            <hr id="hrNews">
+
+            <p id="pNews"> fhvbbfhfhbvfh fbvfhb ifbv fvbbf ggfhjg fjhfj fjssdfiv dsfg efhfg sgihgkjg adkjfs fkgjh skfdjghsodkjbf  adklfjv ldkfvjbs alkf aerlkb sfgkjb agkj b lkfb arlfk  lk kbfkf kfkjs kerghkd lkfjv ekjbgq slfkvjbs lkfb slkfvb sfgkj lkf</p>
+
+            <div id="blockNews" class="container-fluid" >
+                <div class="row" ng-repeat="item in newsArr">
+                    <div class="col-xs-2  col-md-2 "> <p class="numbers"> {{item.date}} </p> <p class="month"> {{item.month}}</p></div>
+                    <div class="col-xs-10 col-md-10">
+                      {{item.text}}
+                        <p id="pButtNews">  <button class="ButtNews" ng-click="showTemplate(item.url)"> Read more</button> </p>
+                    </div>
+                </div>
+
+
+               
+
+            </div>
+        </div>
+</div>
+
+
+
+
+
+    <div id="contact">
+        <h1 style="color:white" class="text-center">Contact us</h1>
+        <hr style="color:aquamarine; width:200px" />
+        <p style="color:white" class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <div class="container">
+            <div class="row blackSpace"></div>
+            <form class="form form-inline " novalidate name="form">
+                                <div class="row">
+                                    <input name="userName" class="inputText col-xs-3 col-xs-offset-3 col-md-3 col-md-offset-3" type="text" ng-model="user.name" required ng-pattern="nameRegex" placeholder="Your name"> 
+                                    <input name="userEmail" class="inputText col-xs-3  col-md-3 " type="email" ng-model="user.email" required ng-pattern="emailRegex" placeholder="Your email">
+                                </div>
+                  <div class="row">
+                      <p class="error col-xs-3 col-xs-offset-3 col-md-3 col-md-offset-3" ng-show="form.userName.$invalid && form.userName.$dirty">{{showError(form.userName.$error)||errorMsgName}}</p>
+                      <p class="error col-xs-3  col-md-3 " ng-show="form.userEmail.$invalid && form.userEmail.$dirty">{{showError(form.userEmail.$error)}}</p>
+                  </div>
+                   
+                <div class="row blackSpace"></div>
+              <div class="row">
+                <textarea class="col-xs-6 col-xs-offset-3 col-md-6 col-md-offset-3" name="userMessage" ng-model="user.message" ng-pattern="messageRegex" placeholder="Your message" required></textarea>
+              </div>
+                <div class="row">
+                <p class="error col-xs-6 col-xs-offset-3 col-md-6 col-md-offset-3" ng-show="form.userMessage.$invalid && form.userMessage.$dirty">{{showError(form.userMessage.$error||errorMsgMsg)}}</p>
+                </div>
+                <div class="row blackSpace"></div>
+               <div class="row">
+    <input class="btnSubmit col-xs-3 col-xs-offset-8 col-md-3 col-md-offset-8 " type="submit" ng-disabled="form.$invalid" ng-click="showMsg()">
+                   </div> 
+</form>
+        </div>
+    </div>
+
+    <div id="footer">
+       
+        <div id="awesome">
+            <p class="pAwesome"> some text some text some text </p>
+            <p class="pAwesome"> some text some text some text</p>
+            <p class="pAwesome">some text some text some text </p>
+        </div>
+    </div>
+
+    <div id="footer2">
+        <div id="Copyright">
+            <button id="buttFoot" ng-click="show('weMakeWeb')"> <p class="pFoot"> &#708      </p> </button>
+            &#169 2014 - Kat all right reserved
+        </div>
+    </div>
+    <div id="newsTemplate" >
+        <div class="panel" ng-view></div>
+    </div>
+</body>
+</html>
