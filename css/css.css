@@ -1,0 +1,475 @@
+﻿body
+{
+}
+p {
+    font: 300 15px Raleway;
+}
+.hr{
+   color: #00e1ff;
+   width:50%;
+}
+/*menu Block*/
+#menu
+{
+  background-color: #ffffff;
+   z-index:2;
+    width: 100%;
+    height:50px;
+    position: fixed;
+    
+}
+.menubutton
+{
+	border: none;
+	background-color: white;
+}
+.menubutton:active
+{
+	border:none;
+	color: #00e1ff;
+	font: 300 15px Raleway;
+    font-weight: 300;
+}
+.menubutton:visited
+{
+	border:none;
+	color: #00e1ff;
+	font: 300 15px Raleway;
+    font-weight: 300;
+}
+.menubutton:hover
+{
+	border:none;
+	color: #00e1ff;
+	font: 300 15px Raleway;
+    font-weight: 300;
+}
+#ket {
+    margin-left: 50%;
+    margin-top: 10px;
+}
+ /*make Web*/
+ #weMakeWeb
+{
+	height: 800px;
+    width: 100%;
+    background-image: url(../images/Layer1.png);
+    line-height: 800px;
+}
+#Websitep
+{
+     color: #ffffff;
+    font: 200 60px Raleway;
+    /*width: 31.1%;*/
+    font-weight: 200;
+    height: 43px;
+    text-align: center;
+   /* margin-top: 30px;*/
+}
+#textweb
+{
+	margin: auto;
+	/*top:50%;
+	display: inline-block;*/
+	width: 20.1%;
+	height: 600px;
+   display: table-cell; 
+   vertical-align: middle; 
+}
+#buttonWeb
+{
+	height: 51px;
+    width: 8.9%;
+    opacity: 0.5;
+    border: 2px white;
+    border-color: white;
+    background-color: black;
+   /* color: #ffffff;
+    font-color: 300 15px Raleway;*/
+}
+#startTour
+{
+	color: #ffffff;
+    font: 300 15px Raleway;
+}
+
+
+/*Services Block*/
+.servicesBlock{
+    height:150px;
+    width:100%;
+}
+.servicesBlock:active{
+    border-bottom:1px solid #00e1ff; 
+}
+.servicesBlock:visited{
+    border-bottom:1px solid #00e1ff; 
+}
+.h2Text{
+    font: 300 15px Raleway;
+    font-weight: 300;
+    text-align:center;
+}
+.images{
+    width:50%;
+    height:50%;
+    margin:auto;
+   display:block;
+}
+#services{
+    margin-top:50px;
+    position:absolute;
+    top:850px;
+   width:100%;
+   height:200px;
+}
+
+/*Services 2 Block*/
+#Responsive
+{
+    position:absolute;
+    top:1300px;
+    height:500px;
+	font-family: Raleway;
+    width: 100%;
+    height: 1000px;
+}
+#resp
+{
+	height: 70px;
+    color: #3f4244;
+    font: 500 15px Raleway;
+    border: 1px solid #00e1ff;
+    text-align: center;
+    line-height: 70px;
+   /* width: 4.7%;*/
+}
+#resp1
+{
+	height: 70px;
+    color: #3f4244;
+    font: 500 15px Raleway;
+    border: 1px solid silver;
+    text-align: center;
+    line-height: 70px;
+}
+#textResp
+{
+
+display: table-cell; 
+vertical-align: middle;
+}
+#hTextResp
+{
+	 color: #3f4244;
+    font: 400 40px Raleway;
+}
+#pTextResp
+{
+	color: #929ba0;
+    font: 300 15px Raleway;
+    width: 500px;
+    
+}
+#getNow
+{
+	text-align:center;
+	border: 1px solid  #00e1ff;
+	width: 110px;
+    height: 51px;
+    color: #00e1ff;
+    font: 300 15px Raleway;
+    background-color: white;
+}
+#white
+{
+	width:100%;
+	height: 70px;
+	color: white;
+}
+#mobileImg
+{
+	height:100%;
+	width:100%;
+}
+
+
+/*Portfolio Block*/
+#portfolio{ position:absolute;
+            top:1850px;
+            width:100%;
+            height:200px;
+
+}
+ .hoverPhotoDivs
+         {
+       position:absolute;
+       opacity:0.5;
+       background-color:white;
+       z-index:1;
+       text-align:center;
+       height: 5em;
+       line-height: 9em;
+}
+   .photos{
+            width:150px;
+            height:150px;
+            display:inline-block;
+        }
+    .button{
+            border:0px;
+            background-color:white;
+        }
+    /*Counters*/
+
+    #counters{
+        background-color:black;
+        color:white;
+        position:absolute;
+        top:2450px;
+        width:100%;
+       
+    }
+    .blackSpace{
+        height:25px;
+        background-color:black;
+    }
+    .images1{
+        width:60px;
+        height:65px;
+        margin:auto;
+        margin-bottom:20px;
+        display:block;
+    }
+
+    /*About Us*/
+   #about{
+        position:absolute;
+        top:2750px;
+        width:100%;
+        height:300px;
+   }
+   .divdiscr{
+       width:80%;
+       margin:auto;
+       height:300px;
+   }
+   .teamPhotos{
+       width:100%;
+       height:60%;
+   }
+   .divUnderPhoto{
+position:absolute;       
+       background-color:black;
+       color:white;
+       opacity:0.8;
+       text-align:center;
+       
+    
+       
+   }
+   .span{
+       color:#00e1ff;
+     
+   }
+   .teamText{
+       width:100%;
+       height:25%;
+       background-color:lightgray;
+        font: 300 12px Raleway;
+        text-align:center;
+
+       line-height: 2em;
+   }
+   .f1{
+       width:25%;
+       height:15%;
+   }
+   /*News*/
+
+#news{
+    position:absolute;
+ top:3300px;
+ height: 700px;
+}
+#newsInner
+{
+	width: 40%;
+	height: 500px;
+	margin: auto;
+}
+
+#hNews
+{
+	color: #3f4244;
+    font: 400 40px Raleway;
+    text-align: center;
+}
+#pNews
+{
+	color: #929ba0;
+    font: 300 15px Raleway;
+    text-align: center;
+}
+#hrNews
+{
+	color: #00BFFF;
+	width: 20%;
+	align: center;
+	size: 2;
+	border: none;
+	height: 4px;
+}
+
+#blockNews
+{
+	margin-top: 50px;
+}
+#pButtNews
+{
+
+	text-align: right;
+	font: 300 15px Raleway;
+}
+.ButtNews
+{
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	border-bottom: 2px solid #DCDCDC;
+	height:30px;
+	width: 100%;
+	font: 300 15px Raleway;
+	color: #00BFFF;
+	background-color: white;
+	text-align: right;
+}
+.numbers
+{
+	 font: 400 66.59px Raleway;
+    color: #00e1ff;
+    text-align: center;
+     
+}
+.month
+{
+text-align: center;
+}
+
+   
+/*Form*/
+#contact{
+    position:absolute;
+        top:4100px;
+        width:100%;
+        height:350px;
+        background-color:black;
+        text-align:center;
+}
+#contactInner{
+    width:50%;
+    background-color:black;
+    
+     margin:auto;
+}
+.form{
+    background-color:black;
+}
+.inputText{
+     background-color:black;
+     border-radius:0px;
+     border-left:0px;
+     border-top:0px;
+     border-right:0px;
+     margin-right:10px;
+
+}
+textarea{
+    background-color:black;
+    border-radius:0px;
+    border-left:0px;
+     border-top:0px;
+     border-right:0px;
+}
+form .ng-valid.ng-dirty {
+            background-color:aquamarine;
+        }
+
+        form .ng-invalid.ng-dirty {
+            background-color: grey;
+        }
+        .error{
+            color:yellow;
+            text-align:justify;
+        }
+
+        .btnSubmit{
+            background-color:black;
+            border:2px solid #00e1ff;
+        }
+
+        /*Footer*/
+        #footer2
+{ width: 100%;
+    height: 112px;
+    background-color: #2F4F4F;
+    position:absolute;
+ top:4850px;
+}
+#buttFoot
+{
+	margin-top: 35px;
+	width: 10%;
+	height: 40px;
+	background-color: black;
+	border: 1px solid white;
+	border-radius: 50%;
+	margin-right: 20px;
+}
+.pFoot
+{
+	color: white;
+	text-align:center;
+	/*margin-top:10px;*/
+	font: 500 30px Raleway;
+}
+#Copyright
+{
+	color: #ffffff;
+    font: 500 18px Raleway;
+    height: 30px;
+    width: 30%;
+    margin: auto;
+}
+
+#footer
+{position:absolute;
+ top:4450px;
+	 width: 100%;
+    height: 400px;
+    background-color: #696969;
+    line-height: 400px;
+}
+#awesome
+{   height: 162px;
+    width: 19.2%;
+    background-color: #00e1ff;
+    margin:auto;
+    display:inline-block;
+    margin-top: 130px;
+    margin-left:40%;
+}
+.pAwesome
+{
+	color: #ffffff;
+    font: 500 15px Raleway;
+    text-align: center;
+    margin-top: 25px;
+}
+
+#newsTemplate{
+    width: 100%;
+    height: 150px;
+   position:absolute;
+ top:5000px;
+}
