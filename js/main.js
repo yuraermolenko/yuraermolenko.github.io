@@ -240,7 +240,7 @@ module.config(function ($routeProvider) {
 
     $routeProvider
         .when('/home', {
-            templateUrl: 'Project.html',
+            templateUrl: 'index.html',
         })
         .when('/news1', {
             templateUrl: 'templates/news1.html',
