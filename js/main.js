@@ -105,10 +105,10 @@ module.controller('mainCtrl', function ($scope, $document, $interval, $timeout, 
         $scope.nameOfService = name;
     }
     $scope.serviceArr = [
-        { name: 'Web Design', src: 'images/icon1.png' },
+        { name: 'Web Design', src: 'images/Icon1.png' },
         { name: 'Graphic Design', src: 'images/icon2.png' },
         { name: 'Programming', src: 'images/icon3.png' },
-        { name: 'Photography', src: 'images/icon4.png' }
+        { name: 'Photography', src: 'images/Icon4.png' }
     ]
     $scope.show = function (id) {
         var element = document.getElementById(id);
