@@ -5,7 +5,7 @@ module.controller('mainCtrl', function ($scope, $document, $interval, $timeout, 
         $location.path(path);
         if (path == '/') $scope.show('news');
         if (path != '/') $scope.show('newsTemplate');
-
+        console.log('watchers', $scope.$$watchers);
     }
 
     //$scope.user.name = $cookies.get('name');
